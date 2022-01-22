@@ -1,0 +1,41 @@
+{
+  "name": "times-timeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/app.ts",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doarakko/times-timeline.git"
+  },
+  "author": "Doarakko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Doarakko/times-timeline/issues"
+  },
+  "homepage": "https://github.com/Doarakko/times-timeline#readme",
+  "dependencies": {
+    "@prisma/client": "^3.8.1",
+    "@slack/bolt": "^3.9.0",
+    "@slack/events-api": "^3.0.1",
+    "@slack/web-api": "^6.6.0",
+    "dotenv": "^14.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.10",
+    "@types/slack-node": "^0.1.4",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  }
+}
