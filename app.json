@@ -1,0 +1,34 @@
+{
+  "name": "times-timeline",
+  "description": "Slack bot to aggregate each channel into one channel, like a Twitter timeline.",
+  "repository": "https://github.com/Doarakko/times-timeline",
+  "keywords": [
+    "bot",
+    "slack bot"
+  ],
+  "env": {
+    "SLACK_APP_TOKEN": {
+      "description": "Enter your Slack app token.",
+      "value": "xapp-aaaa"
+    },
+    "SLACK_BOT_TOKEN": {
+      "description": "Enter your Slack bot token.",
+      "value": "xoxb-bbbb"
+    },
+    "SLACK_CHANNEL_ID": {
+      "description": "Enter Slack channel id to aggregate.",
+      "value": "CCCCCC"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
