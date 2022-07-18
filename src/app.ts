@@ -26,6 +26,7 @@ app.event('app_mention', async ({ say }) => {
 
 app.event('message', async ({ message }) => {
   if (
+    // eslint-disable-next-line
     // @ts-ignore message.subtype and message.channel does not exist on type
     message.subtype === 'slackbot_response' ||
     message.subtype === 'bot_message' ||
@@ -34,6 +35,7 @@ app.event('message', async ({ message }) => {
     return;
   }
 
+  // eslint-disable-next-line
   // @ts-ignore message.text does not exist on type
   let text: string = message.text;
   text = text.replace(/<@.+>/g, '');
@@ -43,6 +45,7 @@ app.event('message', async ({ message }) => {
     return;
   }
 
+  // eslint-disable-next-line
   // @ts-ignore message.user does not exist on type
   const userId = message.user;
 
