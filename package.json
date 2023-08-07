@@ -22,7 +22,7 @@
   "homepage": "https://github.com/Doarakko/times-timeline#readme",
   "dependencies": {
     "@prisma/client": "^3.8.1",
-    "@slack/bolt": "^3.9.0",
+    "@slack/bolt": "^3.13.3",
     "@slack/events-api": "^3.0.1",
     "@slack/web-api": "^6.8.1",
     "dotenv": "^14.2.0"
